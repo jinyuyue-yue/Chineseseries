@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · 瑾玥剧集合集</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23C3263E%27 stroke=%27%23FFD9A0%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2734%27 text-anchor=%27middle%27 fill=%27%23FFF3F1%27 font-family=%27serif%27%3E%E8%B5%B5%3C/text%3E%3C/svg%3E">
+
+  <!-- ฟอนต์ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+Thai:wght@400;500;600&family=Prompt:wght@300;400;500;600;700&family=ZCOOL+QingKe+HuangYou&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+  <!-- สไตล์ -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ส่วนหัว -->
+  <header class="site-header">
+    <!-- โลโก้ -->
+    <a class="logo" href="index.html">
+      <span class="logo-seal">赵</span>
+      <span class="logo-name">瑾玥剧集合集</span>
+    </a>
+
+    <!-- ปุ่มเมนูมือถือ -->
+    <button class="menu-btn" aria-label="เมนู">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- เมนู -->
+    <nav class="nav">
+      <span class="nav-bead" aria-hidden="true"></span>
+      <a href="index.html" data-color="#F0C27A">Home</a>
+      <a href="story.html" data-color="#F58A6E">Story</a>
+      <a href="collection.html" data-color="#FF7A5C">Collection</a>
+      <a href="about.html" data-color="#F59AAC" class="active">About</a>
+    </nav>
+  </header>
+
+  <!-- เพลง -->
+  <audio id="bgm" src="audio/theme.mp3" loop preload="auto"></audio>
+  <button class="music-btn" id="music-btn" aria-label="เปิด/หยุดเพลง" title="เปิด/หยุดเพลง">
+    <!-- ผีผา -->
+    <svg viewBox="0 0 40 80" aria-hidden="true">
+      <!-- หัว -->
+      <path d="M17 2 H23 L22 12 H18Z" fill="#9C3A28"/>
+      <rect x="12" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="12" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <!-- คอ -->
+      <rect x="17.5" y="12" width="5" height="20" fill="#9C3A28"/>
+      <path d="M17 16 H23 M17 20 H23 M17 24 H23 M17 28 H23" stroke="#F0C27A" stroke-width="1.2"/>
+      <!-- ตัว -->
+      <path d="M20 28 C33 28 37 44 36 56 C35 70 28 77 20 77 C12 77 5 70 4 56 C3 44 7 28 20 28Z" fill="#E8452C" stroke="#F0C27A" stroke-width="1.5"/>
+      <path d="M20 34 C28 34 31 46 30 56" fill="none" stroke="#FFD9A0" stroke-width="1" opacity=".5"/>
+      <rect x="14" y="66" width="12" height="3" rx="1" fill="#F0C27A"/>
+      <!-- สาย -->
+      <path d="M18.4 12 V67 M19.5 12 V67 M20.5 12 V67 M21.6 12 V67" stroke="#FFF3F1" stroke-width=".5"/>
+    </svg>
+    <span class="music-icon">❚❚</span>
+  </button>
+
+  <!-- สีไล่และเกรน -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <filter id="grain" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="5" result="n"/>
+        <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+        <feComposite in="g" in2="SourceGraphic" operator="in" result="gi"/>
+        <feBlend in="gi" in2="SourceGraphic" mode="overlay" result="b"/>
+        <feComposite in="b" in2="SourceGraphic" operator="in"/>
+      </filter>
+      <radialGradient id="lanA" cx=".45" cy=".4" r=".65"><stop offset="0" stop-color="#FFD9A0"/><stop offset=".55" stop-color="#EE5A3A"/><stop offset="1" stop-color="#A11F33"/></radialGradient>
+      <linearGradient id="lanB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EE5A76"/><stop offset=".6" stop-color="#FAC9D1"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+      <linearGradient id="lanC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F57E48"/><stop offset="1" stop-color="#FFE2A0"/></linearGradient>
+      <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9C3A28"/><stop offset="1" stop-color="#5A1A14"/></linearGradient>
+      <linearGradient id="pag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8F1A2E"/><stop offset="1" stop-color="#4A1424"/></linearGradient>
+      <!-- กรอบโคม -->
+      <clipPath id="clipA"><rect x="8" y="28" width="134" height="170" rx="34"/></clipPath>
+      <clipPath id="clipB"><rect x="8" y="28" width="134" height="170" rx="20"/></clipPath>
+      <clipPath id="clipC"><rect x="8" y="28" width="134" height="170" rx="60"/></clipPath>
+    </defs>
+  </svg>
+
+  <!-- แบนเนอร์ -->
+  <section class="ab-hero">
+    <div class="container ab-grid">
+      <!-- แนะนำตัว -->
+      <div>
+        <p class="wo rise">我</p>
+        <h1 class="rise d1">ฉันกับซีรีส์จีน</h1>
+        <p class="bio rise d2">ซีรีส์จีนเรื่องแรกที่ดูคือ "ตำนานอู่เม่ยเหนียง" (武媚娘传奇) ตอนอายุ 13 ตอนแรกตั้งใจดูแค่ตอนเดียว เพราะเห็นว่ามีเกือบร้อยตอน แต่สุดท้ายก็ดูยาวจนถึงเช้า ตั้งแต่นั้นมา ทุกเรื่องที่ดูก็ทิ้งความรู้สึกไว้หลากหลาย มีทั้งเรื่องที่ทำให้ยิ้ม ทำให้ร้องไห้ และเรื่องที่ยังคิดถึงอยู่จนทุกวันนี้ เว็บนี้จึงเกิดขึ้น เพื่อแบ่งปันซีรีส์ดี ๆ อีกหลายเรื่องที่หลายคนอาจยังไม่เคยรู้จัก</p>
+      </div>
+
+      <!-- รูปโปรไฟล์ -->
+      <div class="moon rise d2">
+        <span></span><span></span><span></span>
+        <img src="images/about-portrait.jpg" alt="รูปการ์ตูนของฉัน">
+      </div>
+    </div>
+  </section>
+
+  <!-- สามโคม -->
+  <section class="three">
+    <div class="container">
+      <div class="sec-title reveal">
+        <p class="cn">三盏灯</p>
+        <h2>สิ่งที่ทำให้ฉันหลงรัก</h2>
+      </div>
+
+      <div class="shelf-wrap reveal">
+        <div class="shelf-lans">
+          <div class="shelf-lan">
+            <div class="halo"></div>
+            <svg viewBox="0 0 150 212" aria-hidden="true">
+              <rect x="56" y="0" width="38" height="16" rx="3" fill="#C8902E"/>
+              <rect x="50" y="14" width="50" height="14" rx="4" fill="#F0C27A"/>
+              <g filter="url(#grain)">
+                <rect x="8" y="28" width="134" height="170" rx="34" fill="url(#lanA)"/>
+              </g>
+              <path d="M75 28 V198 M38 36 C22 74 22 154 38 190 M112 36 C128 74 128 154 112 190" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity=".35" clip-path="url(#clipA)"/>
+              <rect x="50" y="196" width="50" height="16" rx="4" fill="#F0C27A"/>
+            </svg>
+            <span class="zh">衣</span>
+          </div>
+          <div class="shelf-lan">
+            <div class="halo"></div>
+            <svg viewBox="0 0 150 212" aria-hidden="true">
+              <rect x="56" y="0" width="38" height="16" rx="3" fill="#C8902E"/>
+              <rect x="50" y="14" width="50" height="14" rx="4" fill="#F0C27A"/>
+              <g filter="url(#grain)">
+                <rect x="8" y="28" width="134" height="170" rx="20" fill="url(#lanB)"/>
+              </g>
+              <path d="M75 28 V198 M38 36 C22 74 22 154 38 190 M112 36 C128 74 128 154 112 190" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity=".35" clip-path="url(#clipB)"/>
+              <rect x="50" y="196" width="50" height="16" rx="4" fill="#F0C27A"/>
+            </svg>
+            <span class="zh">曲</span>
+          </div>
+          <div class="shelf-lan">
+            <div class="halo"></div>
+            <svg viewBox="0 0 150 212" aria-hidden="true">
+              <rect x="56" y="0" width="38" height="16" rx="3" fill="#C8902E"/>
+              <rect x="50" y="14" width="50" height="14" rx="4" fill="#F0C27A"/>
+              <g filter="url(#grain)">
+                <rect x="8" y="28" width="134" height="170" rx="60" fill="url(#lanC)"/>
+              </g>
+              <path d="M75 28 V198 M38 36 C22 74 22 154 38 190 M112 36 C128 74 128 154 112 190" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity=".35" clip-path="url(#clipC)"/>
+              <rect x="50" y="196" width="50" height="16" rx="4" fill="#F0C27A"/>
+            </svg>
+            <span class="zh">情</span>
+          </div>
+        </div>
+        <div class="shelf"></div>
+        <div class="shelf-caps">
+          <div><h3>ชุดและผ้า</h3><p>ฮั่นฝู 汉服</p></div>
+          <div><h3>เพลงประกอบ</h3><p>要不然我們就這樣一萬年</p></div>
+          <div><h3>ความรู้สึก</h3><p>Drama</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ปิดท้าย -->
+  <section class="closing">
+    <!-- พระอาทิตย์ -->
+    <div class="sun"></div>
+    <svg class="ring" viewBox="0 0 520 520" aria-hidden="true">
+      <g fill="none" stroke="#FFE3B0" stroke-width="2">
+        <circle cx="260" cy="260" r="190"/>
+        <circle cx="260" cy="260" r="222" stroke-dasharray="3 9"/>
+      </g>
+    </svg>
+
+    <!-- เมฆ -->
+    <div class="cloud l"><img src="images/about-cloud.png" alt=""></div>
+    <div class="cloud r"><img src="images/about-cloud.png" alt=""></div>
+
+    <!-- พื้นและเงาน้ำ -->
+    <div class="ground"></div>
+    <div class="horizon"></div>
+    <div class="reflect"></div>
+    <div class="ripple"></div>
+
+    <!-- เจดีย์ -->
+    <svg class="pagoda" viewBox="0 0 220 300" aria-hidden="true">
+      <g fill="url(#pag)" filter="url(#grain)">
+        <rect x="100" y="0" width="20" height="44"/>
+        <path d="M60 50 Q110 20 160 50 L180 60 H40Z"/>
+        <rect x="80" y="60" width="60" height="40"/>
+        <path d="M40 110 Q110 80 180 110 L200 122 H20Z"/>
+        <rect x="66" y="122" width="88" height="50"/>
+        <path d="M20 182 Q110 150 200 182 L220 196 H0Z"/>
+        <rect x="50" y="196" width="120" height="104"/>
+      </g>
+      <rect x="96" y="232" width="28" height="68" rx="14" fill="#F7A26C"/>
+    </svg>
+
+    <p class="reveal">ม้วนภาพยังคลี่ต่อไปทุกครั้งที่เจอเรื่องใหม่</p>
+  </section>
+
+  <!-- ส่วนท้าย -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- โลโก้ท้าย -->
+      <p class="footer-logo">电视剧</p>
+
+      <!-- เมนูท้าย -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="story.html">Story</a>
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- ติดต่อ -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:thitikarnoffice@gmail.com">thitikarnoffice@gmail.com</a>
+        <a class="ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ลิขสิทธิ์ -->
+    <p class="container footer-copy">© 2026 PERSONAL SERIES COLLECTION</p>
+  </footer>
+
+  <!-- สคริปต์ -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>瑾玥剧集合集</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23C3263E%27 stroke=%27%23FFD9A0%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2734%27 text-anchor=%27middle%27 fill=%27%23FFF3F1%27 font-family=%27serif%27%3E%E8%B5%B5%3C/text%3E%3C/svg%3E">
+
+  <!-- ฟอนต์ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+Thai:wght@400;500;600&family=Prompt:wght@300;400;500;600;700&family=ZCOOL+QingKe+HuangYou&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+  <!-- สไตล์ -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ส่วนหัว -->
+  <header class="site-header">
+    <!-- โลโก้ -->
+    <a class="logo" href="index.html">
+      <span class="logo-seal">赵</span>
+      <span class="logo-name">瑾玥剧集合集</span>
+    </a>
+
+    <!-- ปุ่มเมนูมือถือ -->
+    <button class="menu-btn" aria-label="เมนู">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- เมนู -->
+    <nav class="nav">
+      <span class="nav-bead" aria-hidden="true"></span>
+      <a href="index.html" data-color="#F0C27A" class="active">Home</a>
+      <a href="story.html" data-color="#F58A6E">Story</a>
+      <a href="collection.html" data-color="#FF7A5C">Collection</a>
+      <a href="about.html" data-color="#F59AAC">About</a>
+    </nav>
+  </header>
+
+  <!-- เพลง -->
+  <audio id="bgm" src="audio/theme.mp3" loop preload="auto"></audio>
+  <button class="music-btn" id="music-btn" aria-label="เปิด/หยุดเพลง" title="เปิด/หยุดเพลง">
+    <!-- ผีผา -->
+    <svg viewBox="0 0 40 80" aria-hidden="true">
+      <!-- หัว -->
+      <path d="M17 2 H23 L22 12 H18Z" fill="#9C3A28"/>
+      <rect x="12" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="12" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <!-- คอ -->
+      <rect x="17.5" y="12" width="5" height="20" fill="#9C3A28"/>
+      <path d="M17 16 H23 M17 20 H23 M17 24 H23 M17 28 H23" stroke="#F0C27A" stroke-width="1.2"/>
+      <!-- ตัว -->
+      <path d="M20 28 C33 28 37 44 36 56 C35 70 28 77 20 77 C12 77 5 70 4 56 C3 44 7 28 20 28Z" fill="#E8452C" stroke="#F0C27A" stroke-width="1.5"/>
+      <path d="M20 34 C28 34 31 46 30 56" fill="none" stroke="#FFD9A0" stroke-width="1" opacity=".5"/>
+      <rect x="14" y="66" width="12" height="3" rx="1" fill="#F0C27A"/>
+      <!-- สาย -->
+      <path d="M18.4 12 V67 M19.5 12 V67 M20.5 12 V67 M21.6 12 V67" stroke="#FFF3F1" stroke-width=".5"/>
+    </svg>
+    <span class="music-icon">❚❚</span>
+  </button>
+
+  <!-- แบนเนอร์ -->
+  <section class="hero-home">
+    <!-- ฉากหน้าแรก -->
+    <div class="hero-scene">
+      <!-- สีไล่และลาย -->
+      <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2E0A1A"/>
+            <stop offset=".5" stop-color="#6E1A36"/>
+            <stop offset=".85" stop-color="#B8405A"/>
+            <stop offset="1" stop-color="#D86A72"/>
+          </linearGradient>
+          <linearGradient id="waterD" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#7A1E3A"/>
+            <stop offset="1" stop-color="#3E0E22"/>
+          </linearGradient>
+          <linearGradient id="screenG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FFE9D2"/>
+            <stop offset="1" stop-color="#FFC9A0"/>
+          </linearGradient>
+          <linearGradient id="refFade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".85"/>
+            <stop offset=".75" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+
+          <!-- ลายฉลุ -->
+          <pattern id="latL" width="23" height="23" patternUnits="userSpaceOnUse">
+            <path d="M0 11.5 H23 M11.5 0 V23 M4 4 H19 V19 H4Z" fill="none" stroke="#C88A6A" stroke-width="1.2"/>
+          </pattern>
+          <pattern id="latD" width="17" height="17" patternUnits="userSpaceOnUse">
+            <rect width="17" height="17" fill="#4A1424"/>
+            <path d="M0 8.5 H17 M8.5 0 V17" stroke="#7A1E3A" stroke-width="1.4"/>
+          </pattern>
+          <!-- ซี่ราวระเบียง -->
+          <pattern id="rail" width="18" height="36" patternUnits="userSpaceOnUse">
+            <rect width="4" height="36" fill="#E5584F"/>
+          </pattern>
+
+          <!-- กรอบม่าน -->
+          <clipPath id="screenClip"><rect x="722" y="352" width="276" height="232"/></clipPath>
+
+          <mask id="refMask" maskUnits="userSpaceOnUse" x="-700" y="600" width="2680" height="340">
+            <rect x="-700" y="600" width="2680" height="340" fill="url(#refFade)"/>
+          </mask>
+
+          <!-- เกรน -->
+          <filter id="grEl" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="5" result="n"/>
+            <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+            <feComposite in="g" in2="SourceGraphic" operator="in" result="gi"/>
+            <feBlend in="gi" in2="SourceGraphic" mode="overlay" result="b"/>
+            <feComposite in="b" in2="SourceGraphic" operator="in"/>
+          </filter>
+
+          <!-- ภูเขา -->
+          <path id="hill" d="M-20 572 C35 572 35 552 90 552 C145 552 145 578 200 578 C265 578 265 548 330 548 C390 548 390 576 450 576 C515 576 515 546 580 546 C640 546 640 580 700 580 C765 580 765 550 830 550 C890 550 890 578 950 578 C1015 578 1015 548 1080 548 C1140 548 1140 576 1200 576 C1250 576 1250 572 1300 572 L1300 604 L-20 604Z" fill="#5A1430"/>
+          <g id="hills" opacity=".9">
+            <use href="#hill" x="-1300"/>
+            <use href="#hill"/>
+            <use href="#hill" x="1300"/>
+          </g>
+
+          <!-- ศาลาและสะพาน -->
+          <g id="pavilion">
+            <!-- ฐาน -->
+            <rect x="630" y="586" width="460" height="18" fill="#5A1430"/>
+            <rect x="630" y="586" width="460" height="3" fill="#E5584F" opacity=".6"/>
+
+            <!-- ผนัง ลายฉลุ และฉากกั้น -->
+            <rect x="650" y="350" width="420" height="236" fill="#3E0E22"/>
+            <rect x="652" y="352" width="70" height="232" fill="url(#latD)"/>
+            <rect x="998" y="352" width="70" height="232" fill="url(#latD)"/>
+            <rect x="722" y="352" width="276" height="232" fill="url(#screenG)"/>
+            <!-- ม่าน -->
+            <g id="curtain" clip-path="url(#screenClip)"></g>
+            <image href="images/home-couple.png" x="768" y="384" width="186" height="207" opacity=".62"/>
+            <rect x="722" y="352" width="276" height="232" fill="url(#latL)" opacity=".45"/>
+
+            <!-- เสา -->
+            <g fill="#E5584F">
+              <rect x="648" y="340" width="8" height="250"/>
+              <rect x="720" y="340" width="8" height="250"/>
+              <rect x="996" y="340" width="8" height="250"/>
+              <rect x="1064" y="340" width="8" height="250"/>
+            </g>
+            <g fill="#FF8A78" opacity=".6">
+              <rect x="648" y="340" width="3" height="250"/>
+              <rect x="720" y="340" width="3" height="250"/>
+              <rect x="996" y="340" width="3" height="250"/>
+              <rect x="1064" y="340" width="3" height="250"/>
+            </g>
+
+            <!-- คาน -->
+            <rect x="640" y="338" width="440" height="14" fill="#C3263E"/>
+            <path d="M640 352 H1080" stroke="#3E0E22" stroke-width="3"/>
+
+            <!-- ราวระเบียง -->
+            <g fill="#E5584F">
+              <rect x="630" y="556" width="92" height="4"/>
+              <rect x="998" y="556" width="92" height="4"/>
+              <rect x="630" y="574" width="92" height="3"/>
+              <rect x="998" y="574" width="92" height="3"/>
+            </g>
+            <g transform="translate(632 552)"><rect width="76" height="36" fill="url(#rail)"/></g>
+            <g transform="translate(1000 552)"><rect width="94" height="36" fill="url(#rail)"/></g>
+
+            <!-- หลังคา -->
+            <path d="M580 316 Q604 346 632 342 L1088 342 Q1116 346 1140 316 Q1080 328 960 250 L760 250 Q640 328 580 316Z" fill="#4A1424"/>
+            <path d="M770 250 L652 342 M788 250 L694 342 M806 250 L736 342 M824 250 L778 342 M842 250 L820 342 M860 250 L860 342 M878 250 L900 342 M896 250 L942 342 M914 250 L984 342 M932 250 L1026 342 M950 250 L1068 342" stroke="#C2587A" stroke-width="1" opacity=".35"/>
+            <path d="M580 316 Q604 346 632 342 L1088 342 Q1116 346 1140 316" fill="none" stroke="#E5584F" stroke-width="3"/>
+            <rect x="755" y="242" width="210" height="9" rx="3" fill="#3E0E22"/>
+
+            <!-- สะพาน -->
+            <path d="M150 668 L430 628 L650 604 L650 616 L430 642 L150 684Z" fill="#7A1E3A"/>
+            <path d="M150 668 L430 628 L650 604" fill="none" stroke="#B8405A" stroke-width="2"/>
+            <path d="M150 642 L430 602 L650 580" fill="none" stroke="#E5584F" stroke-width="4"/>
+            <path d="M150 642 v26 M200 635 v26 M250 628 v26 M300 621 v26 M350 613 v26 M400 606 v26 M450 600 v26 M500 594 v26 M550 589 v26 M600 583 v26 M650 578 v26" stroke="#E5584F" stroke-width="4"/>
+          </g>
+        </defs>
+      </svg>
+
+      <!-- ท้องฟ้า -->
+      <svg class="layer" style="z-index:1" data-speed="0.22" data-fade="760" viewBox="-320 0 1920 940" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <rect x="-700" y="-200" width="2680" height="820" fill="url(#skyD)"/>
+        <g class="stars"></g>
+      </svg>
+
+      <!-- ภูเขา -->
+      <svg class="layer" style="z-index:3" data-speed="0.28" data-fade="700" viewBox="-320 0 1920 940" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <use href="#hills" filter="url(#grEl)"/>
+      </svg>
+
+      <!-- ศาลา -->
+      <svg class="layer" id="pavilion-layer" style="z-index:4" data-speed="0.32" data-fade="640" viewBox="-320 0 1920 940" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <use href="#pavilion" filter="url(#grEl)"/>
+      </svg>
+
+      <!-- น้ำและเงาสะท้อน -->
+      <svg class="layer" style="z-index:5" data-speed="0.32" data-fade="640" viewBox="-320 0 1920 940" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <g filter="url(#grEl)">
+          <rect x="-700" y="600" width="2680" height="400" fill="url(#waterD)"/>
+          <g mask="url(#refMask)">
+            <g transform="translate(0 1208) scale(1 -1)" opacity=".6" style="filter: blur(2px)">
+              <use href="#hills"/>
+              <use href="#pavilion"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+
+      <!-- หมอกและหิ่งห้อย -->
+      <svg class="layer" style="z-index:6" data-speed="0.34" data-fade="600" viewBox="-320 0 1920 940" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <ellipse class="mistT" cx="640" cy="604" rx="1100" ry="16" fill="#F59AAC" opacity=".28" style="filter: blur(8px)"/>
+        <g class="flies"></g>
+      </svg>
+
+      <!-- ดาวตก -->
+      <div class="meteors" data-speed="0.22" data-fade="600"></div>
+
+
+      <!-- กลีบดอก -->
+      <div class="petals" data-count="16" data-fade="560"></div>
+
+      <!-- ข้อความแบนเนอร์ -->
+      <div class="hero-text" data-speed="0.35" data-fade="520">
+        <p class="big rise">电视剧</p>
+        <p class="sub rise d1">Personal Series Collection</p>
+        <a class="btn btn-solid rise d2" href="collection.html">Collection <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <p class="scroll-hint" data-fade="200">เลื่อนลงเพื่อเดินต่อ ↓</p>
+    </div>
+
+    <!-- กิ่งซากุระ -->
+    <div class="sakura top" data-speed="0.4" data-fade="560"><img src="images/home-sakura.png" alt=""></div>
+    <div class="sakura bottom" data-speed="0.38" data-fade="560"><img src="images/home-sakura.png" alt=""></div>
+  </section>
+
+  <!-- 3 อันดับในดวงใจ -->
+  <section class="top3">
+    <span class="watermark vt l">心中最爱的三部剧</span>
+    <span class="watermark vt r">电视剧</span>
+
+    <div class="container">
+      <!-- หัวข้อ -->
+      <div class="sec-title reveal">
+        <p class="cn">心中最爱的三部剧</p>
+        <h2>3 อันดับซีรีส์ในดวงใจ</h2>
+      </div>
+
+      <!-- การ์ดอันดับ -->
+      <div class="top3-grid">
+        <!-- อันดับ 2 -->
+        <div class="hang reveal">
+          <div class="lantern slow">
+            <span class="lantern-body"></span>
+          </div>
+          <div class="string"></div>
+          <div class="poster-wrap">
+            <span class="rank">2</span>
+            <a class="poster-card" href="detail.html?id=sansheng">
+              <img src="images/poster-sansheng.jpg" alt="โปสเตอร์ สามชาติสามภพป่าท้อสิบหลี่">
+              <p class="cn">三生三世十里桃花</p>
+              <p class="th">สามชาติสามภพป่าท้อสิบหลี่</p>
+            </a>
+          </div>
+          <div class="tag-hang"><span class="vt">亚军</span></div>
+        </div>
+        <!-- อันดับ 1 -->
+        <div class="hang mid reveal d1">
+          <div class="lantern">
+            <span class="lantern-body"></span>
+          </div>
+          <div class="string"></div>
+          <div class="poster-wrap">
+            <span class="rank">1</span>
+            <a class="poster-card" href="detail.html?id=changyue">
+              <img src="images/poster-changyue.jpg" alt="โปสเตอร์ จันทราอัสดง">
+              <p class="cn">长月烬明</p>
+              <p class="th">จันทราอัสดง</p>
+            </a>
+          </div>
+          <div class="tag-hang"><span class="vt">第一</span></div>
+        </div>
+        <!-- อันดับ 3 -->
+        <div class="hang reveal d2">
+          <div class="lantern">
+            <span class="lantern-body"></span>
+          </div>
+          <div class="string"></div>
+          <div class="poster-wrap">
+            <span class="rank">3</span>
+            <a class="poster-card" href="detail.html?id=xinruan">
+              <img src="images/poster-xinruan.jpg" alt="โปสเตอร์ ภพรักลิขิตสวรรค์">
+              <p class="cn">心软的神</p>
+              <p class="th">ภพรักลิขิตสวรรค์</p>
+            </a>
+          </div>
+          <div class="tag-hang"><span class="vt">第三名</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ส่วนท้าย -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- โลโก้ท้าย -->
+      <p class="footer-logo">电视剧</p>
+
+      <!-- เมนูท้าย -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="story.html">Story</a>
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- ติดต่อ -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:thitikarnoffice@gmail.com">thitikarnoffice@gmail.com</a>
+        <a class="ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ลิขสิทธิ์ -->
+    <p class="container footer-copy">© 2026 PERSONAL SERIES COLLECTION</p>
+  </footer>
+
+  <!-- สคริปต์ -->
+  <script src="js/script.js"></script>
+</body>
+</html>

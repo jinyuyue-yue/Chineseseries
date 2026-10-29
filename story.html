@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story · 瑾玥剧集合集</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23C3263E%27 stroke=%27%23FFD9A0%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2734%27 text-anchor=%27middle%27 fill=%27%23FFF3F1%27 font-family=%27serif%27%3E%E8%B5%B5%3C/text%3E%3C/svg%3E">
+
+  <!-- ฟอนต์ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+Thai:wght@400;500;600&family=Prompt:wght@300;400;500;600;700&family=ZCOOL+QingKe+HuangYou&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+  <!-- สไตล์ -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ส่วนหัว -->
+  <header class="site-header light">
+    <!-- โลโก้ -->
+    <a class="logo" href="index.html">
+      <span class="logo-seal">赵</span>
+      <span class="logo-name">瑾玥剧集合集</span>
+    </a>
+
+    <!-- ปุ่มเมนูมือถือ -->
+    <button class="menu-btn" aria-label="เมนู">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- เมนู -->
+    <nav class="nav">
+      <span class="nav-bead" aria-hidden="true"></span>
+      <a href="index.html" data-color="#F0C27A">Home</a>
+      <a href="story.html" data-color="#F58A6E" class="active">Story</a>
+      <a href="collection.html" data-color="#FF7A5C">Collection</a>
+      <a href="about.html" data-color="#F59AAC">About</a>
+    </nav>
+  </header>
+
+  <!-- เพลง -->
+  <audio id="bgm" src="audio/theme.mp3" loop preload="auto"></audio>
+  <button class="music-btn" id="music-btn" aria-label="เปิด/หยุดเพลง" title="เปิด/หยุดเพลง">
+    <!-- ผีผา -->
+    <svg viewBox="0 0 40 80" aria-hidden="true">
+      <!-- หัว -->
+      <path d="M17 2 H23 L22 12 H18Z" fill="#9C3A28"/>
+      <rect x="12" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="12" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <!-- คอ -->
+      <rect x="17.5" y="12" width="5" height="20" fill="#9C3A28"/>
+      <path d="M17 16 H23 M17 20 H23 M17 24 H23 M17 28 H23" stroke="#F0C27A" stroke-width="1.2"/>
+      <!-- ตัว -->
+      <path d="M20 28 C33 28 37 44 36 56 C35 70 28 77 20 77 C12 77 5 70 4 56 C3 44 7 28 20 28Z" fill="#E8452C" stroke="#F0C27A" stroke-width="1.5"/>
+      <path d="M20 34 C28 34 31 46 30 56" fill="none" stroke="#FFD9A0" stroke-width="1" opacity=".5"/>
+      <rect x="14" y="66" width="12" height="3" rx="1" fill="#F0C27A"/>
+      <!-- สาย -->
+      <path d="M18.4 12 V67 M19.5 12 V67 M20.5 12 V67 M21.6 12 V67" stroke="#FFF3F1" stroke-width=".5"/>
+    </svg>
+    <span class="music-icon">❚❚</span>
+  </button>
+
+  <!-- สีไล่และเกรน -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <filter id="grain" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="5" result="n"/>
+        <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+        <feComposite in="g" in2="SourceGraphic" operator="in" result="gi"/>
+        <feBlend in="gi" in2="SourceGraphic" mode="overlay" result="b"/>
+        <feComposite in="b" in2="SourceGraphic" operator="in"/>
+      </filter>
+      <radialGradient id="bigO" cx=".45" cy=".4" r=".65"><stop offset="0" stop-color="#FBB07A"/><stop offset=".55" stop-color="#EE5A3A"/><stop offset="1" stop-color="#C82E2A"/></radialGradient>
+      <!-- กรอบโคม -->
+      <clipPath id="bigClip"><ellipse cx="310" cy="300" rx="300" ry="240"/></clipPath>
+    </defs>
+  </svg>
+
+  <!-- แบนเนอร์ -->
+  <section class="story-hero">
+    <!-- โคมใหญ่ซ้าย -->
+    <div class="big-lan l" data-speed="0.15">
+      <svg viewBox="0 0 620 560" aria-hidden="true">
+        <ellipse cx="310" cy="300" rx="300" ry="240" fill="url(#bigO)" filter="url(#grain)"/>
+        <path d="M310 60 V540 M170 80 C100 200 100 400 170 520 M450 80 C520 200 520 400 450 520 M60 220 C40 280 40 320 60 380 M560 220 C580 280 580 320 560 380" stroke="#FFD3B0" stroke-width="2" fill="none" opacity=".55" clip-path="url(#bigClip)"/>
+        <rect x="190" y="520" width="240" height="26" rx="8" fill="#F27E48"/>
+      </svg>
+      <div class="banner-hang">
+        <span class="string"></span>
+        <span class="bead"></span>
+        <span class="banner-cn"><span class="vt">花好月圆</span></span>
+      </div>
+    </div>
+
+    <!-- โคมใหญ่ขวา -->
+    <div class="big-lan r" data-speed="0.08">
+      <svg viewBox="0 0 620 560" aria-hidden="true">
+        <ellipse cx="310" cy="300" rx="300" ry="240" fill="url(#bigO)" filter="url(#grain)"/>
+        <path d="M310 60 V540 M170 80 C100 200 100 400 170 520 M450 80 C520 200 520 400 450 520 M60 220 C40 280 40 320 60 380 M560 220 C580 280 580 320 560 380" stroke="#FFD3B0" stroke-width="2" fill="none" opacity=".55" clip-path="url(#bigClip)"/>
+        <rect x="190" y="40" width="240" height="26" rx="8" fill="#F27E48"/>
+        <rect x="190" y="520" width="240" height="26" rx="8" fill="#F27E48"/>
+      </svg>
+      <div class="banner-hang">
+        <span class="string"></span>
+        <span class="bead"></span>
+        <span class="banner-cn"><span class="vt">喜乐连连</span></span>
+      </div>
+    </div>
+
+    <!-- ข้อความแบนเนอร์ -->
+    <div class="story-head">
+      <p class="yi vt rise">一夜</p>
+      <div class="story-text">
+        <p class="en rise d1">One night with a drama</p>
+        <h1 class="rise d1">หนึ่งคืน<br>กับซีรีส์</h1>
+        <p class="th rise d2">เมื่อทุกอย่างในวันเงียบลง ห่มผ้า หยิบขนมใกล้มือ<br>แล้วปล่อยให้เรื่องราวในซีรีส์พาไปจนดึก</p>
+        <p class="cn-text rise d3">当一天的喧嚣归于平静裹上毯子零食放在手边<br>任由剧中的故事陪我到深夜</p>
+      </div>
+    </div>
+
+    <p class="follow">ตามโคมลงไป ↓</p>
+  </section>
+
+  <!-- เส้นเวลา -->
+  <section class="timeline">
+    <div class="container">
+      <!-- 第一章 -->
+      <div class="tl-item">
+        <span class="watermark vt">初见</span>
+        <div class="tl-card reveal">
+          <img src="images/story-1.jpg" alt="เปิดตอนแรก">
+          <p class="chap">第一章</p>
+          <h3>เปิดตอนแรก</h3>
+          <p>หลังทำงานเสร็จก็ต้องหาไรทำสิ!!<br>อย่างการดูซีรีย์ 1 เรื่อง และตอนต่อไปเรื่อยๆจน...</p>
+        </div>
+        <div class="tl-time">
+          <div class="lantern pink">
+            <span class="lantern-body">22:00</span>
+            <span class="lantern-tassel"></span>
+          </div>
+        </div>
+      </div>
+      <!-- 第二章 -->
+      <div class="tl-item">
+        <span class="watermark vt">难舍</span>
+        <div class="tl-card reveal">
+          <img src="images/story-2.jpg" alt="ติดหนึบสุดๆ">
+          <p class="chap">第二章</p>
+          <h3>ติดหนึบสุดๆ</h3>
+          <p>ช่วงที่บอกตัวเองว่า "อีกตอนเดียว" แต่ก็กดต่อไปเรื่อย...</p>
+        </div>
+        <div class="tl-time">
+          <div class="lantern pink">
+            <span class="lantern-body">01:30</span>
+            <span class="lantern-tassel"></span>
+          </div>
+        </div>
+      </div>
+      <!-- 第三章 -->
+      <div class="tl-item">
+        <span class="watermark vt">终章</span>
+        <div class="tl-card dark reveal">
+          <img src="images/story-3.jpg" alt="แล้วก็มาถึงตอนจบ">
+          <p class="chap">第三章</p>
+          <h3>แล้วก็มาถึงตอนจบ</h3>
+          <p>ความรู้สึกตอนเครดิตท้ายเรื่องขึ้น นี่จบแล้วจริงๆหรอเศร้าจัง</p>
+        </div>
+        <div class="tl-time">
+          <div class="lantern pink">
+            <span class="lantern-body">04:10</span>
+            <span class="lantern-tassel"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ตอนจบ -->
+  <section class="ending">
+    <!-- ดาวและโคมลอย -->
+    <div class="ending-stars"></div>
+    <div class="sky-lans"></div>
+    <div class="ending-glow"></div>
+
+    <!-- โคม 终 -->
+    <div class="seal-hang reveal">
+      <span class="seal-string"></span>
+      <div class="seal-end">终</div>
+      <span class="seal-tassel"></span>
+    </div>
+
+    <h2 class="reveal">ปล่อยโคมให้เรื่องนี้</h2>
+    <p class="ending-poem reveal d1"><span class="cn">愿此夜长明</span>ขอให้เรื่องราวนี้ยังส่องสว่างอยู่ในใจ</p>
+    <a class="btn btn-cream reveal d2" id="release" href="collection.html">ปล่อยโคม <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+    <!-- หมอก -->
+    <div class="ending-mist a"></div>
+    <div class="ending-mist b"></div>
+
+    <!-- หลังคา -->
+    <div class="roof"></div>
+  </section>
+
+  <!-- ส่วนท้าย -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- โลโก้ท้าย -->
+      <p class="footer-logo">电视剧</p>
+
+      <!-- เมนูท้าย -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="story.html">Story</a>
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- ติดต่อ -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:thitikarnoffice@gmail.com">thitikarnoffice@gmail.com</a>
+        <a class="ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ลิขสิทธิ์ -->
+    <p class="container footer-copy">© 2026 PERSONAL SERIES COLLECTION</p>
+  </footer>
+
+  <!-- สคริปต์ -->
+  <script src="js/script.js"></script>
+</body>
+</html>

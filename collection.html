@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection · 瑾玥剧集合集</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23C3263E%27 stroke=%27%23FFD9A0%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2734%27 text-anchor=%27middle%27 fill=%27%23FFF3F1%27 font-family=%27serif%27%3E%E8%B5%B5%3C/text%3E%3C/svg%3E">
+
+  <!-- ฟอนต์ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+Thai:wght@400;500;600&family=Prompt:wght@300;400;500;600;700&family=ZCOOL+QingKe+HuangYou&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+  <!-- สไตล์ -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ส่วนหัว -->
+  <header class="site-header">
+    <!-- โลโก้ -->
+    <a class="logo" href="index.html">
+      <span class="logo-seal">赵</span>
+      <span class="logo-name">瑾玥剧集合集</span>
+    </a>
+
+    <!-- ปุ่มเมนูมือถือ -->
+    <button class="menu-btn" aria-label="เมนู">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- เมนู -->
+    <nav class="nav">
+      <span class="nav-bead" aria-hidden="true"></span>
+      <a href="index.html" data-color="#F0C27A">Home</a>
+      <a href="story.html" data-color="#F58A6E">Story</a>
+      <a href="collection.html" data-color="#FF7A5C" class="active">Collection</a>
+      <a href="about.html" data-color="#F59AAC">About</a>
+    </nav>
+  </header>
+
+  <!-- เพลง -->
+  <audio id="bgm" src="audio/theme.mp3" loop preload="auto"></audio>
+  <button class="music-btn" id="music-btn" aria-label="เปิด/หยุดเพลง" title="เปิด/หยุดเพลง">
+    <!-- ผีผา -->
+    <svg viewBox="0 0 40 80" aria-hidden="true">
+      <!-- หัว -->
+      <path d="M17 2 H23 L22 12 H18Z" fill="#9C3A28"/>
+      <rect x="12" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="4" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="12" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <rect x="23" y="8.5" width="5" height="2.4" rx="1" fill="#F0C27A"/>
+      <!-- คอ -->
+      <rect x="17.5" y="12" width="5" height="20" fill="#9C3A28"/>
+      <path d="M17 16 H23 M17 20 H23 M17 24 H23 M17 28 H23" stroke="#F0C27A" stroke-width="1.2"/>
+      <!-- ตัว -->
+      <path d="M20 28 C33 28 37 44 36 56 C35 70 28 77 20 77 C12 77 5 70 4 56 C3 44 7 28 20 28Z" fill="#E8452C" stroke="#F0C27A" stroke-width="1.5"/>
+      <path d="M20 34 C28 34 31 46 30 56" fill="none" stroke="#FFD9A0" stroke-width="1" opacity=".5"/>
+      <rect x="14" y="66" width="12" height="3" rx="1" fill="#F0C27A"/>
+      <!-- สาย -->
+      <path d="M18.4 12 V67 M19.5 12 V67 M20.5 12 V67 M21.6 12 V67" stroke="#FFF3F1" stroke-width=".5"/>
+    </svg>
+    <span class="music-icon">❚❚</span>
+  </button>
+
+  <main class="col-page">
+    <!-- แบนเนอร์ -->
+    <section class="col-hero">
+      <!-- ลายฉลุ -->
+      <div class="lattice l"></div>
+      <div class="lattice r"></div>
+
+      <!-- ตัวอักษรจาง -->
+      <span class="watermark vt l">画中有戏</span>
+      <span class="watermark vt r">戏里人间</span>
+
+      <!-- โคม -->
+      <div class="lantern l">
+        <span class="lantern-body"></span>
+        <span class="lantern-tassel"></span>
+      </div>
+      <div class="lantern r slow">
+        <span class="lantern-body"></span>
+        <span class="lantern-tassel"></span>
+      </div>
+
+      <!-- หัวข้อ -->
+      <p class="juan rise">卷</p>
+      <h1 class="rise d1">แนะนำม้วนซีรีส์ในตำนาน</h1>
+
+      <!-- ปุ่มกรอง -->
+      <div class="filters rise d2">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="old">古装</button>
+        <button class="filter-btn" data-filter="new">现代</button>
+      </div>
+      <p class="filter-note rise d2">ทั้งหมด · ย้อนยุค · ปัจจุบัน</p>
+    </section>
+
+    <!-- หลังคา -->
+    <svg class="tiles" aria-hidden="true">
+      <defs>
+        <pattern id="tiles" width="44" height="64" patternUnits="userSpaceOnUse">
+          <rect width="44" height="52" fill="#F08A6E"/>
+          <path d="M0 0 V52 M22 0 V52 M44 0 V52" stroke="#B3283D" stroke-width="3"/>
+          <path d="M0 52 A11 8 0 0 0 22 52 A11 8 0 0 0 44 52 V58 H0Z" fill="#D9503E"/>
+          <circle cx="11" cy="56" r="5" fill="#FFE3D2"/>
+          <circle cx="33" cy="56" r="5" fill="#FFE3D2"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="64" fill="url(#tiles)"/>
+    </svg>
+    <div class="beam"></div>
+
+    <!-- บอร์ดม้วนภาพ -->
+    <section class="board">
+      <!-- แสงหลังม้วน -->
+      <div class="board-glow"></div>
+
+      <div class="stage">
+        <!-- ป้ายย้อนยุค -->
+        <div class="hang-item group-sign" data-type="old" data-color="#E8452C" data-cn="古装剧" data-th="ซีรีส์ย้อนยุค">
+          <div class="string"></div>
+          <div class="sign"><span class="vt">古装剧</span></div>
+          <div class="bead"></div>
+          <div class="tail"></div>
+          <small>ซีรีส์ย้อนยุค</small>
+        </div>
+        <div class="hang-item" data-id="changyue" data-type="old" data-color="#E8452C">
+          <div class="string"></div>
+          <a class="scroll-link" href="detail.html?id=changyue">
+            <div class="scrollcard">
+              <div class="rod"></div>
+              <div class="paper">
+                <img src="images/poster-changyue.jpg" alt="โปสเตอร์ จันทราอัสดง">
+                <p class="cn">长月烬明</p>
+                <p class="th">จันทราอัสดง</p>
+                <p class="meta">ย้อนยุค · [2566]</p>
+              </div>
+              <div class="rod"></div>
+            </div>
+          </a>
+        </div>
+        <div class="hang-item" data-id="sansheng" data-type="old" data-color="#F59AAC">
+          <div class="string"></div>
+          <a class="scroll-link" href="detail.html?id=sansheng">
+            <div class="scrollcard">
+              <div class="rod"></div>
+              <div class="paper">
+                <img src="images/poster-sansheng.jpg" alt="โปสเตอร์ สามชาติสามภพป่าท้อสิบหลี่">
+                <p class="cn">三生三世十里桃花</p>
+                <p class="th">สามชาติสามภพป่าท้อสิบหลี่</p>
+                <p class="meta">ย้อนยุค · [2560]</p>
+              </div>
+              <div class="rod"></div>
+            </div>
+          </a>
+        </div>
+        <div class="hang-item" data-id="xinruan" data-type="old" data-color="#9B6BE0">
+          <div class="string"></div>
+          <a class="scroll-link" href="detail.html?id=xinruan">
+            <div class="scrollcard">
+              <div class="rod"></div>
+              <div class="paper">
+                <img src="images/poster-xinruan.jpg" alt="โปสเตอร์ ภพรักลิขิตสวรรค์">
+                <p class="cn">心软的神</p>
+                <p class="th">ภพรักลิขิตสวรรค์</p>
+                <p class="meta">ย้อนยุค · [2569]</p>
+              </div>
+              <div class="rod"></div>
+            </div>
+          </a>
+        </div>
+        <div class="hang-item" data-id="yunzhiyu" data-type="old" data-color="#4FB3A9">
+          <div class="string"></div>
+          <a class="scroll-link" href="detail.html?id=yunzhiyu">
+            <div class="scrollcard">
+              <div class="rod"></div>
+              <div class="paper">
+                <img src="images/poster-yunzhiyu.jpg" alt="โปสเตอร์ เหนือเมฆาชะตาลิขิต">
+                <p class="cn">云之羽</p>
+                <p class="th">เหนือเมฆาชะตาลิขิต</p>
+                <p class="meta">ย้อนยุค · [2566]</p>
+              </div>
+              <div class="rod"></div>
+            </div>
+          </a>
+        </div>
+        <!-- ป้ายปัจจุบัน -->
+        <div class="hang-item group-sign" data-type="new" data-color="#F2846A" data-cn="现代剧" data-th="ซีรีส์ยุคปัจจุบัน">
+          <div class="string"></div>
+          <div class="sign"><span class="vt">现代剧</span></div>
+          <div class="bead"></div>
+          <div class="tail"></div>
+          <small>ซีรีส์ยุคปัจจุบัน</small>
+        </div>
+        <div class="hang-item" data-id="weiwei" data-type="new" data-color="#F2846A">
+          <div class="string"></div>
+          <a class="scroll-link" href="detail.html?id=weiwei">
+            <div class="scrollcard">
+              <div class="rod"></div>
+              <div class="paper">
+                <img src="images/poster-weiwei.jpg" alt="โปสเตอร์ ยิ้มโลกละลาย">
+                <p class="cn">微微一笑很倾城</p>
+                <p class="th">ยิ้มโลกละลาย</p>
+                <p class="meta">ปัจจุบัน · [2559]</p>
+              </div>
+              <div class="rod"></div>
+            </div>
+          </a>
+        </div>
+        <div class="hang-item" data-id="xuwo" data-type="new" data-color="#E9B949">
+          <div class="string"></div>
+          <a class="scroll-link" href="detail.html?id=xuwo">
+            <div class="scrollcard">
+              <div class="rod"></div>
+              <div class="paper">
+                <img src="images/poster-xuwo.jpg" alt="โปสเตอร์ เกมรักในเงาลวง">
+                <p class="cn">许我耀眼</p>
+                <p class="th">เกมรักในเงาลวง</p>
+                <p class="meta">ปัจจุบัน · [2568]</p>
+              </div>
+              <div class="rod"></div>
+            </div>
+          </a>
+        </div>
+        <div class="hang-item" data-id="liuxing" data-type="new" data-color="#6B9BEF">
+          <div class="string"></div>
+          <a class="scroll-link" href="detail.html?id=liuxing">
+            <div class="scrollcard">
+              <div class="rod"></div>
+              <div class="paper">
+                <img src="images/poster-liuxing.jpg" alt="โปสเตอร์ รักใสใสหัวใจ 4 ดวง">
+                <p class="cn">流星花园</p>
+                <p class="th">รักใสใสหัวใจ 4 ดวง</p>
+                <p class="meta">ปัจจุบัน · [2561]</p>
+              </div>
+              <div class="rod"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ชื่อเรื่อง -->
+      <div class="board-info">
+        <p class="cn" id="b-cn"></p>
+        <p class="th" id="b-th"></p>
+        <p class="meta" id="b-meta"></p>
+      </div>
+
+      <!-- แผงข้อมูล -->
+      <aside class="focus-panel" id="focus">
+        <button class="focus-close" id="focus-close" aria-label="ปิด">×</button>
+        <p class="cn" id="f-cn"></p>
+        <h2 id="f-th"></h2>
+        <p class="meta" id="f-meta"></p>
+        <p class="syn" id="f-syn"></p>
+        <a class="btn btn-cream" id="f-link" href="#">ดูรายละเอียด <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </aside>
+    </section>
+
+    <!-- ปุ่มควบคุม -->
+    <div class="container board-bar">
+      <p>ม้วนภาพเลื่อนวนเอง · ชี้ที่แผงเพื่อหยุด · กดม้วนตรงกลางเพื่อคลี่อ่าน · ใช้ลูกศรหรือปัดซ้ายขวาก็ได้</p>
+      <div class="ctrls">
+        <button class="ctrl" id="pause" aria-label="หยุดเลื่อนอัตโนมัติ">❚❚</button>
+        <button class="ctrl" id="prev" aria-label="ก่อนหน้า">←</button>
+        <button class="ctrl" id="next" aria-label="ถัดไป">→</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ส่วนท้าย -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- โลโก้ท้าย -->
+      <p class="footer-logo">电视剧</p>
+
+      <!-- เมนูท้าย -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="story.html">Story</a>
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!-- ติดต่อ -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:thitikarnoffice@gmail.com">thitikarnoffice@gmail.com</a>
+        <a class="ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ลิขสิทธิ์ -->
+    <p class="container footer-copy">© 2026 PERSONAL SERIES COLLECTION</p>
+  </footer>
+
+  <!-- สคริปต์ -->
+  <script src="js/script.js"></script>
+</body>
+</html>
